@@ -28,10 +28,10 @@ def run(line):
 
 #-=-========================================================================-=-#
 if __name__ == "__main__":
-    lines = open("input/crateShuffle.txt")
+    file = open("input/crateShuffle.txt")
 
     # Read in crates
-    for line in lines:
+    for line in file:
         if not line.strip():
             break
         parse(line)
@@ -41,7 +41,7 @@ if __name__ == "__main__":
         stacks2.append(stack.copy())
     
     # Move stacks around
-    for line in lines:
+    for line in file:
         run(line)
     
     result = ""
